@@ -1,0 +1,113 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'mainwindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.setEnabled(True)
+        MainWindow.resize(572, 247)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.day_current = QtWidgets.QComboBox(self.centralwidget)
+        self.day_current.setGeometry(QtCore.QRect(20, 30, 151, 21))
+        self.day_current.setObjectName("day_current")
+        self.day_current.addItem("")
+        self.day_current.addItem("")
+        self.day_current.addItem("")
+        self.day_current.addItem("")
+        self.day_current.addItem("")
+        self.day_current.addItem("")
+        self.day_current.addItem("")
+        self.time_current = QtWidgets.QTimeEdit(self.centralwidget)
+        self.time_current.setGeometry(QtCore.QRect(200, 30, 131, 21))
+        self.time_current.setObjectName("time_current")
+        self.pushButtonCalculate = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButtonCalculate.setEnabled(True)
+        self.pushButtonCalculate.setGeometry(QtCore.QRect(440, 80, 75, 31))
+        self.pushButtonCalculate.setObjectName("pushButtonCalculate")
+        self.day_input = QtWidgets.QLineEdit(self.centralwidget)
+        self.day_input.setGeometry(QtCore.QRect(20, 110, 113, 20))
+        self.day_input.setObjectName("day_input")
+        self.hour_input = QtWidgets.QLineEdit(self.centralwidget)
+        self.hour_input.setGeometry(QtCore.QRect(150, 110, 113, 20))
+        self.hour_input.setObjectName("hour_input")
+        self.minutes_input = QtWidgets.QLineEdit(self.centralwidget)
+        self.minutes_input.setGeometry(QtCore.QRect(280, 110, 113, 20))
+        self.minutes_input.setObjectName("minutes_input")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(390, 30, 131, 16))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(20, 10, 47, 13))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(20, 70, 111, 16))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(20, 90, 47, 13))
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(150, 90, 47, 13))
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(self.centralwidget)
+        self.label_6.setGeometry(QtCore.QRect(280, 90, 47, 13))
+        self.label_6.setObjectName("label_6")
+        self.label_9 = QtWidgets.QLabel(self.centralwidget)
+        self.label_9.setGeometry(QtCore.QRect(20, 150, 111, 16))
+        self.label_9.setObjectName("label_9")
+        self.values_output = QtWidgets.QLineEdit(self.centralwidget)
+        self.values_output.setEnabled(False)
+        self.values_output.setGeometry(QtCore.QRect(20, 180, 271, 20))
+        self.values_output.setObjectName("values_output")
+        self.pushButtonCalculateClear = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButtonCalculateClear.setGeometry(QtCore.QRect(440, 120, 75, 31))
+        self.pushButtonCalculateClear.setObjectName("pushButtonCalculateClear")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 572, 21))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Programa_1_AgregarHoras"))
+        self.day_current.setItemText(0, _translate("MainWindow", "Domingo"))
+        self.day_current.setItemText(1, _translate("MainWindow", "Lunes"))
+        self.day_current.setItemText(2, _translate("MainWindow", "Martes"))
+        self.day_current.setItemText(3, _translate("MainWindow", "Miercoles"))
+        self.day_current.setItemText(4, _translate("MainWindow", "Jueves"))
+        self.day_current.setItemText(5, _translate("MainWindow", "Viernes"))
+        self.day_current.setItemText(6, _translate("MainWindow", "Sabado"))
+        self.pushButtonCalculate.setText(_translate("MainWindow", "ADD"))
+        self.label.setText(_translate("MainWindow", "Gustavo Blas Duran ICO22"))
+        self.label_2.setText(_translate("MainWindow", "Actual"))
+        self.label_3.setText(_translate("MainWindow", "Valores de entrada"))
+        self.label_4.setText(_translate("MainWindow", "Dias"))
+        self.label_5.setText(_translate("MainWindow", "Horas"))
+        self.label_6.setText(_translate("MainWindow", "Minutos"))
+        self.label_9.setText(_translate("MainWindow", "Valores de salida"))
+        self.pushButtonCalculateClear.setText(_translate("MainWindow", "CLEAR"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
