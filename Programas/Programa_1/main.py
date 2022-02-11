@@ -95,12 +95,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             timeHour -= 24
         
         dayCurrent += varDias
-        if dayCurrent > 7:
+        if dayCurrent >= 7:
             dayCurrent -= 7
-
+        print(dayCurrent)
         print(week[dayCurrent], timeHour, timeMinute)
         #asignamos los valores en las celdas
-        out = str(week[dayCurrent]) + ' ' + str(timeHour) + ':' + str(timeMinute) + ' a.m.' if timeHour<12 else ' p.m.'
+        out = str(week[dayCurrent]) + ' ' + str(timeHour) + ':' + str(timeMinute) #+ ' a.m.' if timeHour<12 else ' p.m.'
         self.values_output.setText(out)
         
     def clearLines(self):
