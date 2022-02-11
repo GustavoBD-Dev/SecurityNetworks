@@ -41,10 +41,10 @@ def getStrings():
     string_key = ''
     while True:
         # get string text 
-        string_txt = input('INSERTAR CADENA: ')
+        string_txt = input('INSERT STRING: ')
         print(len(string_txt))
         # get key string 
-        string_key =  input('INSERTAR CLAVE: ')
+        string_key =  input('INSERT KEY: ')
         print(len(string_key))
         # compare len of strings
         if len(string_txt) > len(string_key):
@@ -52,7 +52,7 @@ def getStrings():
     # concatenate string KEY with equal len TXT
     while len(string_key) < len(string_txt):
         string_key += string_key
-    # extraemos el numero de caracteres para que sean iguales
+    # we the extract the number of characters
     string_key = string_key[0 : len(string_txt)]
     return string_txt, string_key
 
@@ -80,6 +80,7 @@ if __name__ == '__main__':
             print(encryption)
 
         elif option == 2:
+            # input and validate strings 
             string_txt, string_key = getStrings()
             print(string_txt)
             print(string_key)
