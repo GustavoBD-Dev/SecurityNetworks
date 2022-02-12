@@ -3,22 +3,28 @@ alphabet = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
     'w', 'x', 'y', 'z']
 
 def encrypt(jumps, stringIn):
-    stringOut = ''
-    for i in stringIn:
-        for j in range(len(alphabet)):
-            if i == alphabet[j]:
+    stringOut = '' # string output
+    for i in stringIn: # loop string input
+        for j in range(len(alphabet)): # search char in list alphabet
+            if i == alphabet[j]: # find char 
+                # if positivon char plus jumps is is greater (overflow)
                 if (j+jumps) >= len(alphabet):
+                    # reset position 
                     j -= len(alphabet)
+                # add char in positiion plus jumps to sring output
                 stringOut += alphabet[j+jumps]
     return stringOut
 
 def decrypt(jumps, stringIn):
-    stringOut = ''
-    for i in stringIn:
-        for j in range(len(alphabet)):
-            if i == alphabet[j]:
+    stringOut = '' # string output
+    for i in stringIn: # loop string input
+        for j in range(len(alphabet)): # search char in alphabet list
+            if i == alphabet[j]: # find char
+                # if position char plus plus jumps is less (overflow)
                 if (j+jumps) < 0:
+                    # reset position
                     j += len(alphabet)
+                # add char to position plus jumps to string output
                 stringOut += alphabet[j-jumps]
     return stringOut
 
