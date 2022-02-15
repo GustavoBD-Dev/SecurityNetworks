@@ -4,7 +4,7 @@ alphabet = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
 
 def encrypt(jumps, stringIn):
     stringOut = '' # string output
-    for i in stringIn: # loop string input
+    for i in stringIn.lower(): # loop string input
         for j in range(len(alphabet)): # search char in list alphabet
             if i == alphabet[j]: # find char 
                 # if positivon char plus jumps is is greater (overflow)
@@ -17,7 +17,7 @@ def encrypt(jumps, stringIn):
 
 def decrypt(jumps, stringIn):
     stringOut = '' # string output
-    for i in stringIn: # loop string input
+    for i in stringIn.lower(): # loop string input
         for j in range(len(alphabet)): # search char in alphabet list
             if i == alphabet[j]: # find char
                 # if position char plus plus jumps is less (overflow)
